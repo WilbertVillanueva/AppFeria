@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-@Preview(showBackground = true)
+
 @Composable
 fun MainScreen(onNavigateToSecondActivity: () -> Unit) {
     // Pantalla principal que contiene todos los elementos
@@ -65,7 +65,7 @@ fun MainScreen(onNavigateToSecondActivity: () -> Unit) {
         }
     }
 }
-@Preview(showBackground = true)
+
 @Composable
 fun BusinessItem(text: String) {
 
@@ -104,4 +104,15 @@ fun BusinessItem(text: String) {
             )
         }
     }
+}
+//Los Previews
+@Preview(showBackground = true, name = "MainScreen")
+@Composable
+fun PreviewMainScreen() {
+    MainScreen(onNavigateToSecondActivity = {})
+}
+@Preview(showBackground = true, name = "BusinessItem")
+@Composable
+fun PreviewBusinessItem() {
+    BusinessItem("Ejemplo de Negocio")
 }
